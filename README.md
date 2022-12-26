@@ -6,6 +6,39 @@ Authors : Gabriel Escomel, Raphael Walker, Lucas Duchassin, Guillaume Philippe
 
 [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4066005](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4066005)
 
+### Data
+
+> S&P500 returns and option prices for the period January 1, 1996 to December 31, 2015, a total of 5031 trading days.
+> [...]. We obtain index returns and risk-free rates from CRSP, and option prices, zero coupon yields, and dividend yields from OptionMetrics.
+
+https://optionmetrics.com/
+
+https://www.crsp.org/products/research-products/crsp-us-stock-databases
+
+### Model
+
+> Our methodology relies on the particle MCMC framework [...] This approach reduces the dimensionality of the MCMC algorithm by using MCMC for parameter inference, while applying particle filter to filter the latent states
+
+### SSMs
+
+> The state-space representation applies regardless of whether we observe returns, options, or both. When returns are the observables, f1 refers to equation (6); when options are the observables, f1 is given by equation (8). For the persistent latent variance Vt, f2 represents equation (7); for the non-persistent jump variable, f2 is simply a random draw from the corresponding distribution. [...] We start with the simplest model, the
+Heston (1993) stochastic volatility model (SV). We then discuss the model with return jumps (SVJR), the model with variance jumps (SVJV), and the model with correlated return and variance jumps (SVCJ).
+
+Transition density :
+$$f_2(L_{t+1}|L_t)$$
+
+Measurement density :
+$$f_1(Y_{t+1}|L_{t+1})$$
+
+### Results of the paper
+
+> Our empirical implementation focuses on joint estimation with returns and option data
+
+
+## Data
+
+
+
 ## Instructions
 
 Répliquer certains de leurs résultats, en utilisant les mêmes données (SP500, faciles à trouver sur internet). Vous pouvez notamment :
